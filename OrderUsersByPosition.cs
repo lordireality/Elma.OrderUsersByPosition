@@ -17,7 +17,7 @@ public virtual void OrderUsersExample (Context context){
             sortedUsers.Add (tmpSigner, chiefsCount);
         }
     }
-    context.AllApproversOrdered.AddAll (context.PreApprovers);
+    context.AllUsersOrdered.AddAll (context.PreApprovers);
     foreach (var user in sortedUsers.OrderByDescending (su => su.Value)) {
         context.AllUsersOrdered.Add (user.Key);
     }
